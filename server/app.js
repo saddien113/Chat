@@ -12,12 +12,12 @@ var app = express();
 
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/chattingin', {
+mongoose.connect('mongodb://localhost:27017/chats', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false
 }).then(() => {
-  console.log('successfully connected with mongodb')
+  console.log('successfully connected db')
 }).catch((err) => {
   console.error(err);
 });
